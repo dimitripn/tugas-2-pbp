@@ -21,7 +21,7 @@ Ya, tetap bisa dilakukan, namun sangat tidak dianjurkan. Hal tersebut karena apl
 
 ## Implementasi Pengerjaan Tugas 2
 1. Membuat sebuah fungsi pada 'views.py' yang dapat melakukan pengambilan data dari model dan dikembalikan ke dalam sebuah HTML.
-
+'''
 ...
 def show_katalog(request):
     data_katalog = CatalogItem.objects.all()
@@ -31,7 +31,7 @@ def show_katalog(request):
         'id': '2106750396',
     }
     return render(request, "katalog.html", context)
-
+'''
 Pada file ini saya membuat fungsi bernama '''show_katalog''' yang menerima parameter berupa _request_ dan mengembalikan fungsi render. Fungsi render tersebut berfungsi untuk menampilkan html berisi data yang telah diambil pada fungsi dan disimpan di variabel '''data_katalog'''.
 
 2. Membuat sebuah routing untuk memetakan fungsi yang telah dibuat pada '''views.py'''.
