@@ -4,7 +4,7 @@
 
 ## Bagan _Request Client_
 
-![Bagan](bagan-bagan.jpg)
+![Bagan]
 
 Penjelasan:
 1. _Request client_ diproses dengan mencari informasi yang diinginkan oleh client pada file `urls.py`
