@@ -1,6 +1,6 @@
 # README
 
-### [Link Heroku](https://tutu-2.herokuapp.com/katalog/)
+### [Link Deployment](https://tutu-2.herokuapp.com/katalog/)
 
 ## Bagan _Request Client_
 
