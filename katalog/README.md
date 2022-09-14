@@ -20,7 +20,7 @@ _Virtual environment_ merupakan sebuah tools yang berfungsi untuk membuat lingku
 Ya, tetap bisa dilakukan, namun sangat tidak dianjurkan. Hal tersebut karena aplikasi web merupakan suatu hal yang kemungkinan akan digunakan oleh banyak pengguna, sehingga dapat menimbulkan berbagai masalah dan juga akan lebih rumit untuk me-_maintain_-nya.
 
 ## Implementasi Pengerjaan Tugas 2
-1. Membuat sebuah fungsi pada '''views.py''' yang dapat melakukan pengambilan data dari model dan dikembalikan ke dalam sebuah HTML.
+1. Membuat sebuah fungsi pada 'views.py' yang dapat melakukan pengambilan data dari model dan dikembalikan ke dalam sebuah HTML.
 
 ...
 def show_katalog(request):
