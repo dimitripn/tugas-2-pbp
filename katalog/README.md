@@ -7,9 +7,9 @@
 ![Bagan]
 
 Penjelasan:
-1. _Request client_ diproses dengan mencari informasi yang diinginkan oleh client pada file '''urls.py'''.
-2. Setelah ditemukan, '''urls.py''' akan memanggil fungsi view yang terletak pada '''views.py'''.
-3. '''views.py''' akan mengambil data-data yang akan ditampilkan melalui file '''models.py'''.
+1. _Request client_ diproses dengan mencari informasi yang diinginkan oleh client pada file `urls.py`
+2. Setelah ditemukan, `urls.py` akan memanggil fungsi view yang terletak pada `views.py`
+3. `views.py` akan mengambil data-data yang akan ditampilkan melalui file `models.py`
 4. Kemudian diakhiri dengan mengembalikan response yang kemudian akan dirender dan ditampilkan kepada _client_.
 
 ## _Virtual Environment_
@@ -32,9 +32,9 @@ def show_katalog(request):
     }
     return render(request, "katalog.html", context)
 ```
-Pada file ini saya membuat fungsi bernama '''show_katalog''' yang menerima parameter berupa _request_ dan mengembalikan fungsi render. Fungsi render tersebut berfungsi untuk menampilkan html berisi data yang telah diambil pada fungsi dan disimpan di variabel '''data_katalog'''.
+Pada file ini saya membuat fungsi bernama `show_katalog` yang menerima parameter berupa _request_ dan mengembalikan fungsi render. Fungsi render tersebut berfungsi untuk menampilkan html berisi data yang telah diambil pada fungsi dan disimpan di variabel `data_katalog`
 
-2. Membuat sebuah routing untuk memetakan fungsi yang telah dibuat pada '''views.py'''.
+2. Membuat sebuah routing untuk memetakan fungsi yang telah dibuat pada `views.py`
 ```
 ...
 urlpatterns = [
@@ -49,7 +49,7 @@ urlpatterns = [
     path('', show_katalog, name='show_katalog')
 ]
 ```
-Pada file '''urls.py''' yang terletak di dalam folder '''project_django''' ditambahkan sebuah elemen pada variabel '''urlpatterns''' agar program dapat mengambil data yang sesuai dengan _request client_ (kode pertama). KKemudian pada file '''urls.py''' yang terletak di folder '''katalog''' ditambahkan sebuah elemen pada variabel urlpatterns juga yang berfungsi untuk memanggil fungsi show_katalog untuk menampilkan data yang telah dikumpulkan dan disimpan pada variabel di dalam fungsi tersebut (kode kedua).
+Pada file `urls.py` yang terletak di dalam folder `project_django` ditambahkan sebuah elemen pada variabel `urlpatterns` agar program dapat mengambil data yang sesuai dengan _request client_ (kode pertama). KKemudian pada file `urls.py` yang terletak di folder `katalog` ditambahkan sebuah elemen pada variabel urlpatterns juga yang berfungsi untuk memanggil fungsi show_katalog untuk menampilkan data yang telah dikumpulkan dan disimpan pada variabel di dalam fungsi tersebut (kode kedua).
 
 3. Memetakan data yang didapatkan ke dalam HTML dengan sintaks dari Django untuk pemetaan data template.
 ```
@@ -66,6 +66,6 @@ Pada file '''urls.py''' yang terletak di dalam folder '''project_django''' ditam
 ...
 ```
 
-4. Melakukan '''deployment''' ke Heroku terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-teman melalui Internet. 
+4. Melakukan `deployment` ke Heroku terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-teman melalui Internet. 
 
-Pada tahap ini dibuat aplikasi baru pada heroku. Kemudian dihubungkan dengan github melalui secrets yang ditambahkan HEROKU_APP_NAME dan HEROKU_API_KEY
+Pada tahap ini dibuat aplikasi baru pada heroku. Kemudian dihubungkan dengan github melalui secrets yang ditambahkan `HEROKU_APP_NAME` dan `HEROKU_API_KEY`.
