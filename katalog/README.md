@@ -35,23 +35,24 @@ def show_katalog(request):
 Pada file ini saya membuat fungsi bernama '''show_katalog''' yang menerima parameter berupa _request_ dan mengembalikan fungsi render. Fungsi render tersebut berfungsi untuk menampilkan html berisi data yang telah diambil pada fungsi dan disimpan di variabel '''data_katalog'''.
 
 2. Membuat sebuah routing untuk memetakan fungsi yang telah dibuat pada '''views.py'''.
-
+```
 ...
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('example_app.urls')),
     path('katalog/', include('katalog.urls')),
 ]
-
+```
+```
 ...
 urlpatterns = [
     path('', show_katalog, name='show_katalog')
 ]
-
+```
 Pada file '''urls.py''' yang terletak di dalam folder '''project_django''' ditambahkan sebuah elemen pada variabel '''urlpatterns''' agar program dapat mengambil data yang sesuai dengan _request client_ (kode pertama). KKemudian pada file '''urls.py''' yang terletak di folder '''katalog''' ditambahkan sebuah elemen pada variabel urlpatterns juga yang berfungsi untuk memanggil fungsi show_katalog untuk menampilkan data yang telah dikumpulkan dan disimpan pada variabel di dalam fungsi tersebut (kode kedua).
 
 3. Memetakan data yang didapatkan ke dalam HTML dengan sintaks dari Django untuk pemetaan data template.
-
+```
 ...
 {% for katalog in list_katalog %}
         <tr>
@@ -63,6 +64,7 @@ Pada file '''urls.py''' yang terletak di dalam folder '''project_django''' ditam
             <th>{{katalog.item_url}}</th>
         </tr>
 ...
+```
 
 4. Melakukan '''deployment''' ke Heroku terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-teman melalui Internet. 
 
