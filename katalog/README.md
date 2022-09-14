@@ -4,7 +4,7 @@
 
 ## Bagan _Request Client_
 
-![Bagan](https://drive.google.com/file/d/1p5zBm9lT3Bi02lsxmoXtVYVuZUF5Zzgx/view?usp=sharing)
+![Bagan](bagan-bagan.jpg)
 
 Penjelasan:
 1. _Request client_ diproses dengan mencari informasi yang diinginkan oleh client pada file `urls.py`
