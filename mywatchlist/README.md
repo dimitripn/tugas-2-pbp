@@ -9,9 +9,9 @@ JSON (_JavaScript Object Notation_) ialah format data, sedangkan XML (_Extensibl
 Kita memerlukan _data delivery_ dalam mengimplementasi sebuah platform karena dalam mengembangkan sebuah platform kita perlu melakukan pengiriman data. Dengan adanya _data delivery_, pengiriman data tersebut akan berjalan dengan lebih mudah karena data dapat dengan mudah di-_transfer_ dari satu pihak ke pihak lainnya.
 
 ## Implementasi Tugas 3
-1. Membuat folder mywatchlist di dalam clone repository dengan menjalankan command `python manage.py startapp mywatchlist` di terminal.
+### 1. Membuat folder mywatchlist di dalam clone repository dengan menjalankan command `python manage.py startapp mywatchlist` di terminal.
 
-2. Melakukan routing pada file `urls.py` di dalam folder `project_django` dengan menambahkan path ke dalam `urlpatterns` seperti pada di bawah ini.
+### 2. Melakukan routing pada file `urls.py` di dalam folder `project_django` dengan menambahkan path ke dalam `urlpatterns` seperti pada di bawah ini.
 ```
 urlpatterns = [
     ...
@@ -19,9 +19,9 @@ urlpatterns = [
 ]
 ```
 
-3. Melakukan routing pada `urls.py` di dalam folder `mywatchlist` juga.
+### 3. Melakukan routing pada `urls.py` di dalam folder `mywatchlist` juga.
 
-4. Membuat modelnya pada file `models.py` di folder `mywatchlist` sesuai dengan ketentuan tugas yang diminta seperti di bawah ini.
+### 4. Membuat modelnya pada file `models.py` di folder `mywatchlist` sesuai dengan ketentuan tugas yang diminta seperti di bawah ini.
 ```
 class MyWatchList(models.Model):
     watched = models.BooleanField(default=False)
@@ -31,7 +31,7 @@ class MyWatchList(models.Model):
     review = models.TextField()
 ```
 
-5. Membuat fungsi untuk menampilkan html, xml, dan json pada file `views.py` di dalam folder `mywatchlist` seperti di bawah ini.
+### 5. Membuat fungsi untuk menampilkan html, xml, dan json pada file `views.py` di dalam folder `mywatchlist` seperti di bawah ini.
 ```
 def show_watchlist(request):
     watchlist = MyWatchList.objects.all()
@@ -53,7 +53,7 @@ def show_json(request):
     return HttpResponse(serializers.serialize('json', data), content_type='application/json')
 ```
 
-6. Kemudian, melakukan migrasi model yang telah dibuat dengan menjalankan perintah `python manage.py makemigrations` dan `python manage.py migrate` di cmd.
+### 6. Kemudian, melakukan migrasi model yang telah dibuat dengan menjalankan perintah `python manage.py makemigrations` dan `python manage.py migrate` di cmd.
 
 ## Postman
 ### HTML
