@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js%22%3E"></script>
+
+<style>
+    h1, h5, p {text-align: center;}
+    th {text-align: center;}
+    tr {background-color: rgba(0,0,0,0.5);}
+    div {text-align: center;}
+    table, th, td {
+      border: 1px solid rgb(255, 255, 255);
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(red, yellow, green);
+      height:100vh;
+      color:#fff;
+    }
+</style>
+
+<br>
+<div>
+  <div>
+    <h2 style="text-align: center">My Watchlist</h2>
+    {% if is_watched_more %}
+    <h3 style="text-align: center">Selamat, kamu sudah banyak menonton!</h3>
+    {% else %}
+    <h3>Wah, kamu masih sedikit menonton!</h3>
+    {% endif %}
+    <div style="text-align: center">
+      <button onclick="location.href='/mywatchlist/html'">HTML</button>
+      <button onclick="location.href='/mywatchlist/xml'">XML</button>
+      <button onclick="location.href='/mywatchlist/json'">JSON</button>
+    </div>
+  </div>
+</div>
+<br>
+
+{% endblock content %}
