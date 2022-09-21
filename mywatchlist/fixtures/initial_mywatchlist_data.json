@@ -1,0 +1,123 @@
+[
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 1,
+      "fields": {
+        "watched": true,
+        "title": "Peaky Blinders",
+        "rating": 5,
+        "release_date": "2013-09-12",
+        "review": "Raw, dramatic and surprisingly realistic for a series set in the 1920s. The acting is superb and the storylines are gripping."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 2,
+      "fields": {
+        "watched": true,
+        "title": "Red Notice",
+        "rating": 4,
+        "release_date": "2021-11-04",
+        "review": "A great action film with a great cast. The story is a little far fetched but it's a fun watch."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 3,
+      "fields": {
+        "watched": true,
+        "title": "Mencuri Raden Saleh",
+        "rating": 5,
+        "release_date": "2022-09-18",
+        "review": "A heist theme film from Indonesia. The story is interesting and the acting is great."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 4,
+      "fields": {
+        "watched": true,
+        "title": "Money Heist",
+        "rating": 5,
+        "release_date": "2017-05-02",
+        "review": "A heist theme series from Spain. A great watch with a great cast."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 5,
+      "fields": {
+        "watched": false,
+        "title": "Top Gun: Maverick",
+        "rating": 5,
+        "release_date": "2022-05-27",
+        "review": "Haven't watched it yet but I'm sure it's going to be a great watch."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 6,
+      "fields": {
+        "watched": true,
+        "title": "The Batman",
+        "rating": 5,
+        "release_date": "2022-03-02",
+        "review": "A great film with great storyline and the twist at the end is a great surprise."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 7,
+      "fields": {
+        "watched": false,
+        "title": "Breaking Bad",
+        "rating": 5,
+        "release_date": "2008-01-20",
+        "review": "Haven't watched it yet but I'm sure it's going to be a great watch."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 8,
+      "fields": {
+        "watched": true,
+        "title": "Jurassic World: Dominion",
+        "rating": 4,
+        "release_date": "2022-06-08",
+        "review": "Not as good as the previous films (Jurassic Park) but still a great watch with a great cast."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 9,
+      "fields": {
+        "watched": true,
+        "title": "Thor: Love and Thunder",
+        "rating": 4,
+        "release_date": "2022-07-06",
+        "review": "I don't know, I just love marvel films."
+      }
+    },
+    {
+      "model": "mywatchlist.mywatchlist",
+      "pk": 10,
+      "fields": {
+        "watched": true,
+        "title": "Spider-Man: No Way Home",
+        "rating": 5,
+        "release_date": "2021-12-15",
+        "review": "A great film for me, because there are many character from the previous version of spider-man."
+      }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+          "watched": false,
+          "title": "The Gray Man",
+          "rating": 4,
+          "release_date": "2022-07-22",
+          "review": "Haven't watched it yet but I'm sure it's going to be a great watch."
+        }
+    }
+  ]
