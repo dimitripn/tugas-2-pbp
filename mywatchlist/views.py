@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core import serializers
 from mywatchlist.models import MyWatchList
+
 # Create your views here.
 def show_watchlist_index(request):
     watchlist = MyWatchList.objects.all()
