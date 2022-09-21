@@ -56,6 +56,9 @@ def show_json(request):
 6. Kemudian, melakukan migrasi model yang telah dibuat dengan menjalankan perintah `python manage.py makemigrations` dan `python manage.py migrate` di terminal.
 
 ## Postman
-### [HTML](mywatchlist/html_tugas3.jpg)
-### [JSON](mywatchlist/json_tugas3.jpg)
-### [XML](mywatchlist/xml_tugas3.jpg)
+### HTML
+![HTML](html_tugas3.jpg)
+### JSON
+![JSON](json_tugas3.jpg)
+### XML
+![XML](xml_tugas3.jpg)
