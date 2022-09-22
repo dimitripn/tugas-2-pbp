@@ -11,47 +11,47 @@ Kita memerlukan _data delivery_ dalam mengimplementasi sebuah platform karena da
 ## Implementasi Tugas 3
 1. Membuat folder mywatchlist di dalam clone repository dengan menjalankan command `python manage.py startapp mywatchlist` di terminal.
 
-2. Melakukan routing pada file `urls.py` di dalam folder `project_django` dengan menambahkan path ke dalam `urlpatterns` seperti pada di bawah ini.
-```
-urlpatterns = [
-    ...
-    path('mywatchlist/', include('mywatchlist.urls')),
-]
-```
+2. Melakukan routing pada file `urls.py` di dalam folder `project_django` dengan menambahkan path ke dalam `urlpatterns` seperti pada di bawah ini:
+    ```
+    urlpatterns = [
+        ...
+        path('mywatchlist/', include('mywatchlist.urls')),
+    ]
+    ```
 
 3. Melakukan routing pada `urls.py` di dalam folder `mywatchlist` juga.
 
-4. Membuat modelnya pada file `models.py` di folder `mywatchlist` sesuai dengan ketentuan tugas yang diminta seperti di bawah ini.
-```
-class MyWatchList(models.Model):
-    watched = models.BooleanField(default=False)
-    title = models.CharField(max_length=100)
-    rating = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
-    release_date = models.DateField()
-    review = models.TextField()
-```
+4. Membuat modelnya pada file `models.py` di folder `mywatchlist` sesuai dengan ketentuan tugas yang diminta seperti di bawah ini:
+    ```
+    class MyWatchList(models.Model):
+        watched = models.BooleanField(default=False)
+        title = models.CharField(max_length=100)
+        rating = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
+        release_date = models.DateField()
+        review = models.TextField()
+    ```
 
-5. Membuat fungsi untuk menampilkan html, xml, dan json pada file `views.py` di dalam folder `mywatchlist` seperti di bawah ini.
-```
-def show_watchlist(request):
-    watchlist = MyWatchList.objects.all()
-    context = {
-        'watchlist': watchlist,
-        'nama' : 'Dimitri Prima Nugraha',
-        'id' : '2106750396'
-    }
-    return render(request, 'watchlist.html', context)
-```
-```
-def show_xml(request):
-    data = MyWatchList.objects.all()
-    return HttpResponse(serializers.serialize('xml', data), content_type='application/xml')
-```
-```
-def show_json(request):
-    data = MyWatchList.objects.all()
-    return HttpResponse(serializers.serialize('json', data), content_type='application/json')
-```
+5. Membuat fungsi untuk menampilkan html, xml, dan json pada file `views.py` di dalam folder `mywatchlist` seperti di bawah ini:
+    ```
+    def show_watchlist(request):
+        watchlist = MyWatchList.objects.all()
+        context = {
+            'watchlist': watchlist,
+            'nama' : 'Dimitri Prima Nugraha',
+            'id' : '2106750396'
+        }
+        return render(request, 'watchlist.html', context)
+    ```
+    ```
+    def show_xml(request):
+        data = MyWatchList.objects.all()
+        return HttpResponse(serializers.serialize('xml', data), content_type='application/xml')
+    ```
+    ```
+    def show_json(request):
+        data = MyWatchList.objects.all()
+        return HttpResponse(serializers.serialize('json', data), content_type='application/json')
+    ```
 
 6. Kemudian, melakukan migrasi model yang telah dibuat dengan menjalankan perintah `python manage.py makemigrations` dan `python manage.py migrate` di terminal.
 
