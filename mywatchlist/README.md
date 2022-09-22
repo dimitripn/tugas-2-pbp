@@ -5,7 +5,7 @@
 ## Perbedaan antara JSON, XML, dan HTML
 JSON (_JavaScript Object Notation_) ialah format data, sedangkan XML (_Extensible Markup Language_) adalah bahasa _markup_. XML biasanya digunakan untuk mengangkut dan menyimpan data dari satu aplikasi ke aplikasi lainnya melalui internet. Di sisi lain, JSON adalah format pertukaran data ringan yang jauh lebih mudah bagi komputer untuk mengurai data yang sedang dikirim. HTML (_Hypertext Markup Language_) pun sama seperti XML, yaitu merupakan bahasa _markup_. Dalam membuat file HTML, terdapat standar atau format khusus yang harus diikuti. Format tersebut dapat ditemukan dalam standar kode internasional atau ASCII.
 
-## Mengapa Memerlukan _Data Delivery_ dalam Mengimplementasi Sebuah Platform
+## Mengapa Memerlukan _Data Delivery_ dalam Mengimplementasi Sebuah Platform?
 Kita memerlukan _data delivery_ dalam mengimplementasi sebuah platform karena dalam mengembangkan sebuah platform kita perlu melakukan pengiriman data. Dengan adanya _data delivery_, pengiriman data tersebut akan berjalan dengan lebih mudah karena data dapat dengan mudah di-_transfer_ dari satu pihak ke pihak lainnya.
 
 ## Implementasi Tugas 3
