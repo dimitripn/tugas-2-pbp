@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js%22%3E"></script>
+
+<style>
+    h1, h5, h6, p, table {text-align: center;}
+    th {text-align: center;}
+    tr {background-color: rgba(0,0,0,0.5);}
+    div {text-align: center;}
+    table, th, td {
+      border: 1px solid rgb(255, 255, 255);
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(red, yellow, green);
+      height:100vh;
+      color:#fff;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }  
+</style>
+
+<div class = "login">
+
+    <br>
+    <h1>Login</h1>
+    <br>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table class ="center">
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
+            </tr>
+                    
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input class="btn login_btn" type="submit" value="Login" style="color:#fff"></td>
+            </tr>
+        </table>
+    </form>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}     
+        
+    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+
+</div>
+
+{% endblock content %}
