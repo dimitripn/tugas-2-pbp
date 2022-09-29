@@ -144,5 +144,5 @@ Ya, kita dapat membuat elemen `<form>` secara manual (tanpa menggunakan generato
     ```
 
 7. Melakukan _push_ ke repositori dan _deployment_ ke Heroku. Lalu membuat 2 _user_ dan 3 _dummy data_ pada masing-masing _user_:
-   ![dummy1](PBP-Tugas4.jpg)
+   ![dummy1](PBP-Tugas-4.jpg)
    ![dummy2](PBP-Tugas4(1).jpg)
