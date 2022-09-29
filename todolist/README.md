@@ -44,7 +44,7 @@ Ya, kita dapat membuat elemen `<form>` secara manual (tanpa menggunakan generato
         is_finished = models.BooleanField(default = False)
    ```
 
-4. Membuat fungsi untuk `register`, `login`, dan `logout` pada `views.py` kemudian membuat bentuk html nya:
+4. Membuat fungsi untuk `register`, `login`, dan `logout` pada `views.py` kemudian membuat bentuk HTML-nya:
    ```
    def register(request):
         form = UserCreationForm()
@@ -83,7 +83,7 @@ Ya, kita dapat membuat elemen `<form>` secara manual (tanpa menggunakan generato
         return response
     ```
 
-5. Membuat fungsi `show_todolist`, `add_task`, `delete_task`, dan `update_task` pada `views.py` kemudian membuat bentuk html nya:
+5. Membuat fungsi `show_todolist`, `add_task`, `delete_task`, dan `update_task` pada `views.py` kemudian membuat bentuk HTML-nya:
    ```
    @login_required(login_url='/todolist/login/')
     def show_todolist(request):
