@@ -1,6 +1,6 @@
 # Tugas 4
 
-### [Link Deployment](https://tutu-2.herokuapp.com/todolist/)
+### [Link Deployment](https://tutu-2.herokuapp.com/todolist/login)
 
 ## Apa kegunaan `{% csrf_token %}` pada elemen `<form>`? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen `<form>`?
 CSRF Token (Cross Site Request Forgery Token) merupakan sebuah random string yang di-generate setiap kali halaman form muncul. Token tersebut memiliki variasi yang unik, acak, serta memiliki nilai yang besar sehingga menjadikannya rumit untuk diretas oleh _hacker_ atau peretas. Jika tidak terdapat potongan kode tersebut pada elemen `<form>`, maka peretas dapat melakukan hal-hal yang tidak diinginkan melalui link atau HTTP _request_.
