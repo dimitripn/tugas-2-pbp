@@ -1,3 +1,42 @@
+# Tugas 5
+
+### [Link Deployment](https://tutu-2.herokuapp.com/todolist/login)
+
+## Perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+Inline CSS: kode CSS yang ditulis langsung pada atribut elemen HTML. Kelebihan dari menggunakan Inline CSS ini ialah sangat membantu ketika hanya ingin menguji dan melihat suatu perubahan pada satu elemen, proses load lebih cepat karena permintaan HTTP yang lebih kecil, dan sangat berguna untuk memperbaiki kode dengan cepat. Kekurangan dari menggunakan Inline CSS ini adalah tidak efisien karena Inline CSS hanya bisa diterapkan pada satu elemen HTML.
+
+Internal CSS: kode CSS yang ditulis di dalam tag <style> dan kode HTML dituliskan di bagian header file HTML. Keuntungan dari menggunakan Internal CSS ini ialah tidak perlu melakukan upload beberapa file karena HTML dan CSS berada dalam satu file. Kekurangannya ialah tidak efisien jika ingin menggunakan CSS yang sama dalam beberapa file dan membuat performa lebih lama karena CSS ang berbeda-beda akan mengakibatkan loading ulang setiap kali ganti halaman.
+
+External CSS: kode CSS yang ditulis terpisah dengan kode HTML dan biasanya ditulis di sebuah file khusus yang berekstensi _.css_. Kelebihan External CSS ini ialah ukuran file HTML akan menjadi lebih kecil dan struktur dari kode HTML jadi lebih rapi, loading website menjadi lebih cepat, dan file CSS dapat digunakan di beberapa halaman website sekaligus. Kekurangannya ialah halaman akan menjadi berantakan, ketika file CSS gagal dipanggil oleh file HTML, biasanya diakibatkan oleh koneksi internet yang lama.
+
+## Tag HTML5
+1. `<!DOCTYPE>`, digunakan untuk menentukan tipe dokumen
+2. `<html>`, digunakan untuk membuat dokumen HTML
+3. `<title>`, digunakan untuk judul suatu page
+4. `<p>`, digunakan untuk menuliskan paragraf pada page
+5. `<h1>...<h6>`, digunakan untuk heading suatu page
+6. `<br>`, digunakan untuk membuat baris kosong
+7. `<!--...-->`, digunakan untuk menuliskan komen
+8. `<form>`, digunakan untuk membuat form input bagi user
+9. `<input>`, digunakan untuk input user
+10. `<button>`, digunakan untuk tombol yang dapat di klik user
+
+## Tipe-tipe CSS selector
+1. Tag Selector: menggunakan tag HTML sebagai selectornya.
+2. ID Selector: menggunakan atribut “id” pada element HTML sebagai selectornya.
+3. Class Selector: menggunakan atribut “class” pada element HTML sebagai selectornya.
+4. Universal Selector: menggunakan tanda bintang "*" pada CSS dan bertujuan untuk ‘mencari’ semua tag yang ada.
+5. Attribute Selector: digunakan untuk mencari seluruh tag yang memiliki atribut yang dituliskan.
+
+## Implementasi Tugas 5
+1. Membuka file html yang telah dibuat pada tugas 4 kemarin kemudian edit sesuai dengan perintah tugas.
+2. Pertama pada file `login.html`, menambahkan _bootstrap_, kemudian buat style sesuai yang diinginkan (meliputi warna font, warna background, dan margin).
+3. Pada file `register.html`, menambahkan _bootstrap_ juga, kemudian membuat styling sesuai yang diinginkan (meliputi warna font, warna background, dan margin).
+4. Pada file `add_task.html`, menambahkan _bootstrap_ juga, kemudian membuat styling sesuai yang diinginkan (meliputi warna font, warna background, dan margin).
+5. Pada file `todolist.html`, juga menambahkan _bootstrap_, kemudian membuat styling sesuai yang diinginkan (meliputi warna font, warna background, dan margin), menambahkan _navigation bar_, dan juga mengubah bentuk tampilan tabel pada tugas 4 kemarin menjadi _cards_.
+6. Setelah selesai _styling_, push kembali ke github yang nantinya akan ter-_deploy_ ke Heroku.
+
+
 # Tugas 4
 
 ### [Link Deployment](https://tutu-2.herokuapp.com/todolist/login)

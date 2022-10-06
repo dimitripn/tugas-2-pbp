@@ -44,15 +44,15 @@
                 
                 <h5 class="card-title">Date : {{task.date}}</h5>
                 <h5 class="card-title">Description : {{task.description}}</h5>
+                
                 <h5 class="card-title">
                   Status : 
                   {% if task.is_finished %}
-                  Finished
+                  <h5 style="color: Green;">Selesai</h5>
                   {% else %}
-                  Not Yet
+                  <h5 style="color: red;">Belum Selesai</h5>
                   {% endif %}
                 </h5>
-                
                 
               </div>
               <h5 class="card-footer d-flex justify-content-around">
