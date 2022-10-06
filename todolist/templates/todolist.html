@@ -31,6 +31,7 @@
       <br>
       <h1 class="text-center" style="color: white;">TO-DO LIST SIUUU!</h1>
       <br>
+      {% if data_tasks %}
       <div class ="row">
         {% for task in data_tasks %}
           <div class ="col-12 col-md-6 col-lg-4">
@@ -68,6 +69,10 @@
           </div>
         {% endfor %}
       </div>
+      {% else %}
+      <br>
+      <h1 class="text-center" style="color: white; margin: auto;">Tambah dulu to-do list mu pada Menu di kiri atas :D</h1>
+      {% endif %}
     </div>
   
 
