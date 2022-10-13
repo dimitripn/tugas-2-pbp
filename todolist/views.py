@@ -1,12 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from django.contrib.auth import logout
-from django.http import HttpResponseRedirect
+from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
 import datetime
 
@@ -53,7 +54,8 @@ def show_todolist(request):
     data_tasks = MyToDoList.objects.filter(user=request.user)
     context = {'data_tasks':data_tasks,
                'user' : request.user,
-               'last_login': request.COOKIES['last_login'],}
+               # 'last_login': request.COOKIES['last_login'],
+               }
     return render(request, 'todolist.html', context)
 
 @login_required(login_url='/todolist/login/')
@@ -70,14 +72,31 @@ def add_task(request):
     context = {'form':form}
     return render(request, 'add_task.html', context)
 
-@login_required(login_url='/todolist/login/')
-def delete_task(request, task_id):
-    task = MyToDoList.objects.get(id=task_id)
-    if task:
+@csrf_exempt
+def add_task_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        todo = MyToDoList.objects.create(title=title, description=description,date=datetime.date.today(), is_finished=False, user=request.user)
+
+        result = {
+            'fields':{
+                'title':todo.title,
+                'description':todo.description,
+                'is_finished':todo.is_finished,
+                'date':todo.date,
+            },
+            'pk':todo.pk
+        }
+        return JsonResponse(result)
+
+@csrf_exempt
+def delete_task(request,id):
+    if request.method == "DELETE":
+        task = get_object_or_404(MyToDoList, id = id)
         task.delete()
-        return redirect('todolist:show_todolist')
-    messages.error(request, 'Tidak dapat menghapus task!')
-    return redirect('todolist:show_todolist')
+
+    return HttpResponse(status=202)
 
 @login_required(login_url='/todolist/login/')
 def update_task(request, task_id):
@@ -88,4 +107,9 @@ def update_task(request, task_id):
         task.is_finished = True
     task.save()
     return redirect('todolist:show_todolist')
-    
+
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    data_tasks = MyToDoList.objects.filter(user=request.user)
+    data = serializers.serialize('json', data_tasks)
+    return HttpResponse(data, content_type='application/json')
