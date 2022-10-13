@@ -18,6 +18,56 @@ Event-Driven Programming adalah suatu paradigma pemrograman yang alur programnya
 5. Tidak perlu adanya refresh lagi dari user
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat fungsi `show_json` pada `views.py` untuk return data yang dibuat oleh user:
+   ```
+   def show_json(request):
+        data_tasks = MyToDoList.objects.filter(user=request.user)
+        data = serializers.serialize('json', data_tasks)
+        return HttpResponse(data, content_type='application/json')
+   ```
+
+2. Membuat routing untuk fungsi tersebut didalam file `urls.py`:
+   ```
+   urlpatterns = [    
+        ...
+        path('json/', show_json, name='show_json'),
+        ...
+    ]
+   ```
+
+3. membuat fungsi `add_task_ajax` pada `views.py`:
+   ```
+   def add_task_ajax(request):
+        if request.method == 'POST':
+            title = request.POST.get('title')
+            description = request.POST.get('description')
+            todo = MyToDoList.objects.create(title=title, description=description,date=datetime.date.today(), is_finished=False, user=request.user)
+
+            result = {
+                'fields':{
+                    'title':todo.title,
+                    'description':todo.description,
+                    'is_finished':todo.is_finished,
+                    'date':todo.date,
+                },
+                'pk':todo.pk
+            }
+            return JsonResponse(result)
+    ```
+
+4. Membuat routing untuk fungsi tersebut didalam file `urls.py`:
+   ```
+   urlpatterns = [    
+        ...
+        path('add/', add_task_ajax, name='add_task_ajax'),
+        ...
+    ]
+
+5. Kemudian mengedit `todolist.html` dengan menggunakan fungsi yang sudah dibuat dan merapikan tampilannya.
+   ![Tugas 6](PBP-Tugas-6.jpg)
+
+6. Terakhir push kembali ke github untuk deployment ke Heroku.
+
 
 
 ##### _Dimitri Prima Nugraha | 2106750396 | PBP-F_
